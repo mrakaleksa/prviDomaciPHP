@@ -1,6 +1,9 @@
 <?php
 
 require "dbBroker.php";
+require "model/player.php";
+
+
 
 
 
