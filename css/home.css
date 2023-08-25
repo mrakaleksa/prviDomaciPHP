@@ -1,0 +1,120 @@
+* {
+    font-family: "Peignot Bold", bold, peignot;
+    color: rgb(255, 255, 255);
+}
+
+body {
+    background-color: rgb(3, 70, 148);
+    
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main-menu {
+    list-style-type:none;
+    float: right;
+}
+
+.menu-item {
+    display:inline-block;
+}
+
+.menu-item a {
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu-item a:hover {
+    color: rgb(219, 161, 17);
+    border-bottom: 1px solid rgb(219, 161, 17);
+}
+
+.logo {
+    float: left;
+    padding-left: 20px;
+    padding-top: 10px;
+   
+}
+
+.logo a:hover{
+    color: rgb(238, 36, 44);
+}
+
+.logo h1 {
+    margin: auto;
+}
+
+.hero{
+    background-image: url("../image/pitch.jpeg");
+    height: 600px;
+    align-items: center;
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+/* "clearfix hack" */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.hero-text{
+    color: rgb(219, 161, 17);
+    background-color: rgb(3, 70, 148, 0.8);;
+    padding: 60px;
+    font-size: 64px;
+    border-radius: 15px;
+    margin-left: 1%;
+}
+
+.article{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 90px;
+}
+
+.title{
+    text-align: center;
+}
+
+.blog{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 90px;
+}
+.cards{
+    display: flex;
+}
+
+.card-text{
+    margin: 40px;
+}
+
+.card-title{
+    margin-left: 40px;
+    margin-top: 10px;
+    color: rgb(238, 36, 44);
+}
+
+.card img{
+    border: 1px solid rgb(238, 36, 44);
+    border-radius: 20px;
+    padding: 5px;
+    max-width: 80%;
+    height: 175px;
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+

@@ -1,0 +1,44 @@
+* {
+    font-family: "Peignot Bold", bold, peignot;
+    color: rgb(255, 255, 255);
+}
+
+body {
+    background-color: rgb(3, 70, 148);
+   
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main-menu {
+    list-style-type:none;
+    float: right;
+}
+
+.menu-item {
+    display:inline-block;
+}
+
+.menu-item a {
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu-item a:hover {
+    color: rgb(219, 161, 17);
+    border-bottom: 1px solid rgb(219, 161, 17);
+}
+
+
+
+.title{
+    text-align: center;
+}
+
+
+
+

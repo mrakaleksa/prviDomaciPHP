@@ -1,0 +1,96 @@
+* {
+    font-family: "Peignot Bold", bold, peignot;
+}
+
+
+body {
+    background-image: url("../image/outside.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  
+}
+
+
+img{
+    opacity:100;
+}
+
+form {
+   
+    background-color: rgba(255, 255, 255, 0.562);
+    display: block;
+    border: 5px solid rgb(3, 70, 148);
+    border-radius: 25px;
+    color: rgb(3, 70, 148);
+    text-align: center;
+    
+    padding-bottom: 50px;
+    
+}
+
+form:hover {
+    background-color: rgba(3, 70, 148, 0.8);
+    display: block;
+    margin-top: 0em;
+    border: 5px solid rgb(219, 161, 17);
+    color: white;
+}
+
+
+input[type=text], input[type=password] {
+
+    width: 50%;
+    padding: 12px 20px;
+    margin: 0 auto;
+    display: flex;
+    border: 2px solid rgb(238, 36, 44);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+
+button {
+   background-color: rgb(3, 70, 148);
+    color: white;
+    padding: 14px 20px;
+    margin: 0 auto;
+    border: 2px solid rgb(238, 36, 44);
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    display:grid;
+    font-size: x-large;
+}
+
+
+button:hover {
+    background-color: rgb(219, 161, 17);
+    color: rgb(3, 70, 148);
+    border: none;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 0;
+    padding-top: 100px;
+    padding-bottom: 125px;
+    
+}
+
+#logo{
+    height: 250px;
+    width: 250px;
+}
+
+.container {
+    padding: 16px;
+}
+
+.main-div {
+    border-radius: 2px;
+    margin: 10px auto 30px;
+    max-width: 38%;
+    padding: 50px 70px 70px 71px
+}
