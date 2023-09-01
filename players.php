@@ -3,7 +3,23 @@
 require "dbBroker.php";
 require "model/player.php";
 
+session_start();
 
+if (empty($_SESSION['loggeduser']) || $_SESSION['loggeduser'] == '') {
+    header("Location: index.php");
+    exit();
+}
+
+$result = Player::getAll($conn);
+if (!$result) {
+    echo "Greska kod upita<br>";
+    exit();
+}
+
+if ($result->num_rows == 0) {
+    echo "Nema unetih igraca";
+    exit();
+}
 
 
 
@@ -30,9 +46,9 @@ require "model/player.php";
         <div class="navigation clearfix">
                 <div class="logo"><h1>CHELSEA FC</h1></div>
                 <div class="menu">
-                    <!-- neoznacena lista koja predstavlja nas navigacioni meni -->
+                    
                     <ul class="main-menu">
-                        <!-- elementi liste koji predstavljaju linkove ka odredjenim delovima sajta -->
+                       
                         <li class="menu-item"><a href="home.php">HOME</a></li>
                         <li class="menu-item"><a href="kontakt.html">LOG OUT</a></li>
                     </ul>
@@ -40,76 +56,75 @@ require "model/player.php";
             </div>
 
         <div class="jumbotron text-center" style=" background-color: rgba(255, 182, 193, 0);">
-            <div class="container">
+            <div class="title">
                 <h1 style="color:white">Players Information</h1>
             </div>
         </div>
 
-        <div class="col-md-8" style="text-align:center; width:66.6%;float:left">
-            <div id="pregled">
-                <table id="tabela" class="table sortable table-bordered table-hover ">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Age</th>
-                            <th scope="col">Country</th>
-                            <th scope="col">Contract</th>
-                           
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        while ($red = $result->fetch_array()) {
-                        ?>
-                            <tr id="tr-<?php echo $red["playerID"] ?>">
-                                <td><?php echo $red["playerID"] ?></td>
-                                <td><?php echo $red["name"] ?></td>
-                                <td><?php echo $red["age"] ?></td>
-                                <td><?php echo $red["country"] ?></td>
-                                <td><?php echo $red["contract"] ?></td>
-                                <td>
-                                    <label class="radio-btn">
-                                        <input type="radio" name="checked-donut" value=<?php echo $red["playerID"] ?>>
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </td>
-
+        <div class="page">
+            <div class="col-md-8" style="text-align:center; width:66.6%;float:left">
+                <div id="pregled">
+                    <table id="tabela" class="table sortable table-bordered table-hover ">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Age</th>
+                                <th scope="col">Country</th>
+                                <th scope="col">Contract</th>
+                            
                             </tr>
-                        <?php
-                        }
-                        ?>
-                    </tbody>
-                </table>
-                <div>
+                        </thead>
+                        <tbody>
+                            <?php
+                            while ($row = $result->fetch_array()) {
+                            ?>
+                                <tr id="tr-<?php echo $row["playerID"] ?>">
+                                    <td><?php echo $row["playerID"] ?></td>
+                                    <td><?php echo $row["name"] ?></td>
+                                    <td><?php echo $row["age"] ?></td>
+                                    <td><?php echo $row["country"] ?></td>
+                                    <td><?php echo $row["contract"] ?></td>
+                                    <td>
+                                        <label class="radio-btn">
+                                            <input type="radio" name="checked-donut" value=<?php echo $row["playerID"] ?>>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </td>
 
-
-
-
+                                </tr>
+                            <?php
+                            }
+                            ?>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+
+            <div class="col-md-4" style="display: block; background-color: rgba(255, 255, 255, 0.4);">
+
+                <div style="text-align:center;">
+                    <input type="text" id="myInput" class="btn" placeholder="SEARCH" onkeyup="pretrazi()" style="margin: 5px;">
+                </div>
+                <div style="text-align:center; ">
+                    <button id="btn-add" class="btn" data-toggle="modal" data-target="#myModal" style="background-color: rgb(3, 70, 148); margin: 5px;">ADD</button>
+                </div>
+                <div style="text-align:center;">
+                    <button id="btn-edit" class="btn" data-toggle="modal" data-target="#izmeniModal" style="background-color: rgb(3, 70, 148); margin: 5px;">EDIT</button>
+                </div>
+                <div style="text-align:center;">
+                    <button id="btn-delete" class="btn" style="background-color: rgb(3, 70, 148); margin: 5px;">DELETE</button>
+                </div>
+                <div style="text-align:center;">
+                    <h3>SORT BY NAME</h3>
+                    <button id="btn-sort" class="btn" onclick="sortTable()" style="background-color: rgb(3, 70, 148); margin: 5px;">SORT</button>
+                </div>
+                <br>
+            </div>  
         </div>
 
-        <div class="col-md-4" style="display: block; background-color: rgba(255, 255, 255, 0.4);">
 
-            <div style="text-align:center;">
-                <input type="text" id="myInput" class="btn" placeholder="SEARCH" onkeyup="pretrazi()">
-            </div>
-            <div style="text-align:center; ">
-                <button id="btn-dodaj" class="btn" data-toggle="modal" data-target="#myModal">ADD</button>
-            </div>
-            <div style="text-align:center;">
-                <button id="btn-izmeni" class="btn" data-toggle="modal" data-target="#izmeniModal">EDIT</button>
-            </div>
-            <div style="text-align:center;">
-                <button id="btn-izbrisi" class="btn">DELETE</button>
-            </div>
-            <div style="text-align:center;">
-                <h3>SORT BY NAME</h3>
-                <button id="btn-izmeni" class="btn" onclick="sortTable()">SORT</button>
-            </div>
-            <br>
-        </div>
+        
     </div>
 
 

@@ -12,13 +12,14 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     if ($rs->num_rows == 1) {
         echo "Uspesna prijava";
-        $_SESSION['loggeduser'] = "prijavljen";
+        $_SESSION['loggeduser'] = "loggedIN";
         $_SESSION['id'] = $rs->fetch_assoc()['id'];
         header('Location: home.php');
         exit();
     } else {
         
         echo "Neuspesna prijava";
+        header("Location: index.php");
         exit();
     }
 }
