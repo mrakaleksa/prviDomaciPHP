@@ -5,18 +5,14 @@
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-    <!-- div blok klase container sadrzi sve elemente naseg sajta -->
     <div class="container">
-        <!-- klasa clearfix se koristi unutar css-a za resavanje problema preklapanja elemenata -->
         <div class="navigation clearfix">
             <div class="logo"><h1>CHELSEA FC</h1></div>
             <div class="menu">
-                <!-- neoznacena lista koja predstavlja nas navigacioni meni -->
                 <ul class="main-menu">
-                    <!-- elementi liste koji predstavljaju linkove ka odredjenim delovima sajta -->
                     <li class="menu-item"><a href="home.php">HOME</a></li>
                     <li class="menu-item"><a href="players.php">PLAYERS</a></li>
-                    <li class="menu-item"><a href="kontakt.html">LOG OUT</a></li>
+                    <li class="menu-item"><a href="logOut.php">LOG OUT</a></li>
                 </ul>
             </div>
         </div>
@@ -24,7 +20,6 @@
         <div class="hero"><h1 class="hero-text">KEEP THE <br> BLUE FLAG <br> FLYING HIGH</h1></div>
         <div class="article">
             <h1 class="title">Ovo je naslov</h1>
-            <!-- horizontalna linija koja se koristi pri vizuelnom razdvajanju uglavnom tekstualnih celina-->
             <hr>
             <p class="article-text">
                 Organska hrana je hrana koja je uzgajana po standardima organske proizvodnje, odnosno bez upotrebe pesticida i veštačkog đubriva kada su žitarice, voće i povrće u pitanju, odnosno antibiotika ili hormona u uzgoju životinja čije se meso, ali i druge namirnice životinjskog porekla (jaja i mlečni proizvodi) koriste u ishrani. 
@@ -35,7 +30,6 @@
             <hr>
             <div class="cards">
                 <div class="card">
-                    <!-- slika koja se prikazuje na sajtu, nalazi se u nasem folderu koji "imitira" server -->
                     <img src="image/outside.jpg">
                     <h3 class="card-title">Chelsea FC</h3>
                     <p class="card-text">

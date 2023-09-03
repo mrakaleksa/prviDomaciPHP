@@ -57,6 +57,12 @@
             return $myArray;
         }
 
+        public static function getLast(mysqli $conn)
+        {
+            $q = "SELECT * FROM player ORDER BY playerID DESC LIMIT 1";
+            return $conn->query($q);
+        }
+
 
 
 

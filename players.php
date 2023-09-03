@@ -20,14 +20,6 @@ if ($result->num_rows == 0) {
     echo "Nema unetih igraca";
     exit();
 }
-
-
-
-
-
-
-
-
 ?>
 
 
@@ -54,7 +46,7 @@ if ($result->num_rows == 0) {
                     <ul class="main-menu">
                        
                         <li class="menu-item"><a href="home.php">HOME</a></li>
-                        <li class="menu-item"><a href="kontakt.html">LOG OUT</a></li>
+                        <li class="menu-item"><a href="logOut.php">LOG OUT</a></li>
                     </ul>
                 </div>
             </div>
@@ -133,7 +125,6 @@ if ($result->num_rows == 0) {
 
 
     <br>
-    <a href="logout.php" class="label label-primary" style="font-size:16px; position: fixed; bottom:0; right:0; float:right">Logout</a>
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
 
@@ -144,7 +135,7 @@ if ($result->num_rows == 0) {
                 </div>
                 <div class="modal-body">
                     <div class="container tim-form">
-                        <form action="#" method="post" id="dodajForm">
+                        <form action="#" method="post" id="addForm">
                             <h3 id="naslov" style="color: black" text-align="center">Add New Player</h3>
                             <div class="row">
                                 <div class="col-md-6">
@@ -161,7 +152,7 @@ if ($result->num_rows == 0) {
                                         <input type="number" style="border: 1px solid black" name="contract" class="form-control" placeholder="Contract *" value="" />
                                     </div>
                                     <div class="form-group">
-                                        <button id="btnDodaj" type="submit" class="btn btn-success btn-block" style="background-color: orange; border: 1px solid black;"><i class="glyphicon glyphicon-plus"></i> Add Player
+                                        <button id="btnAdd" type="submit" class="btn btn-success btn-block" style="background-color: orange; border: 1px solid black;"><i class="glyphicon glyphicon-plus"></i> Add Player
                                         </button>
                                     </div>
 
@@ -192,7 +183,7 @@ if ($result->num_rows == 0) {
                 <div class="modal-body">
                     <div class="container tim-form">
                         <form action="#" method="post" id="izmeniForm">
-                            <h3 style="color: black">Change Player</h3>
+                            <h3 style="color: black">Edit Player</h3>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -211,7 +202,7 @@ if ($result->num_rows == 0) {
                                         <input id="contractt" type="number" name="contract" class="form-control" placeholder="Contract *" value="" />
                                     </div>
                                     <div class="form-group">
-                                        <button id="btnIzmeni" type="submit" class="btn btn-success btn-block" style="color: white; background-color: orange; border: 1px solid white"><i class="glyphicon glyphicon-pencil"></i> Change Player
+                                        <button id="btnEdit" type="submit" class="btn btn-success btn-block" style="color: white; background-color: orange; border: 1px solid white"><i class="glyphicon glyphicon-pencil"></i> Edit Player
                                         </button>
                                     </div>
 
