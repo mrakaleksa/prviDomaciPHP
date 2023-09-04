@@ -5,10 +5,6 @@
 
 body {
     background-color: rgb(3, 70, 148);
-    background-image: url("../image/bridge.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
    
 }
 
@@ -37,13 +33,35 @@ body {
     border-bottom: 1px solid rgb(219, 161, 17);
 }
 
-
+#logout a:hover{
+    color: rgb(238, 36, 44);
+    border-bottom: 1px solid rgb(238, 36, 44);
+}
 
 .title{
     text-align: center;
 }
 
+.table{
+    background-color: rgb(219, 161, 17);
+    
+}
 
+
+
+th, td{
+    color:rgb(3, 70, 148);
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn:hover{
+    color: rgb(219, 161, 17);
+}
+
+.btn{
+    border-color: rgb(219, 161, 17);
+}
 
 
 

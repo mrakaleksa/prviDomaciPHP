@@ -29,11 +29,14 @@ body {
 }
 
 .menu-item a:hover {
-    color: rgb(238, 36, 44);
+    color: rgb(219, 161, 17);
     border-bottom: 1px solid rgb(219, 161, 17);
 }
 
-
+#logout a:hover{
+    color: rgb(238, 36, 44);
+    border-bottom: 1px solid rgb(238, 36, 44);
+}
 
 .logo {
     float: left;

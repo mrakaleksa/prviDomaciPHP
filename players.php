@@ -97,23 +97,22 @@ if ($result->num_rows == 0) {
                 </div>
             </div>
 
-            <div class="col-md-4" style="display: block; background-color: rgba(255, 255, 255, 0.4);">
+            <div class="col-md-4" style="display: block;">
 
                 <div style="text-align:center;">
-                    <input type="text" id="myInput" class="btn" placeholder="SEARCH" onkeyup="search()" style="margin: 5px;">
+                    <input type="text" id="myInput" class="btn" placeholder="SEARCH" onkeyup="search()" style="margin: 8px;">
                 </div>
                 <div style="text-align:center; ">
-                    <button id="btn-add" class="btn" data-toggle="modal" data-target="#myModal" style="background-color: rgb(3, 70, 148); margin: 5px;">ADD</button>
+                    <button id="btn-add" class="btn" data-toggle="modal" data-target="#myModal" style="background-color: rgb(3, 70, 148); margin: 7px;">ADD</button>
                 </div>
                 <div style="text-align:center;">
-                    <button id="btn-edit" class="btn" data-toggle="modal" data-target="#izmeniModal" style="background-color: rgb(3, 70, 148); margin: 5px;">EDIT</button>
+                    <button id="btn-edit" class="btn" data-toggle="modal" data-target="#izmeniModal" style="background-color: rgb(3, 70, 148); margin: 7px;">EDIT</button>
                 </div>
                 <div style="text-align:center;">
-                    <button id="btn-delete" class="btn" style="background-color: rgb(3, 70, 148); margin: 5px;">DELETE</button>
+                    <button id="btn-delete" class="btn" style="background-color: rgb(3, 70, 148); margin: 7px;">DELETE</button>
                 </div>
                 <div style="text-align:center;">
-                    <h3>SORT BY NAME</h3>
-                    <button id="btn-sort" class="btn" onclick="sortTable()" style="background-color: rgb(3, 70, 148); margin: 5px;">SORT</button>
+                    <button id="btn-sort" class="btn" onclick="sortTable()" style="background-color: rgb(3, 70, 148); margin: 7px;">SORT BY NAME</button>
                 </div>
                 <br>
             </div>  
