@@ -1,7 +1,7 @@
 <?php
 
-require "dbBroker.php";
-require "model/player.php";
+require "../dbBroker.php";
+require "../model/player.php";
 
 if (isset($_POST['playerID']) && isset($_POST['name']) && isset($_POST['age'])
     && isset($_POST['country']) && isset($_POST['contract'])) {

@@ -1,7 +1,7 @@
 <?php
 
-require "dbBroker.php";
-require "model/player.php";
+require "../dbBroker.php";
+require "../model/player.php";
 
 if(isset($_POST['playerID'])) {
     $myArray = Player::getById($_POST['playerID'], $conn);

@@ -1,7 +1,7 @@
 <?php
 
-require "dbBroker.php";
-require "model/player.php";
+require "../dbBroker.php";
+require "../model/player.php";
 
 $status = Player::getLast($conn);
 if ($status) {

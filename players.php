@@ -12,12 +12,12 @@ if (empty($_SESSION['loggeduser']) || $_SESSION['loggeduser'] == '') {
 
 $result = Player::getAll($conn);
 if (!$result) {
-    echo "Greska kod upita<br>";
+    echo "Querry error<br>";
     exit();
 }
 
 if ($result->num_rows == 0) {
-    echo "Nema unetih igraca";
+    echo "No added players";
     exit();
 }
 ?>
@@ -32,7 +32,7 @@ if ($result->num_rows == 0) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="icon" href="image/logo.png" />
     <link rel="stylesheet" href="css/players.css">
-    <title>Fudbalski timovi</title>
+    <title>Players</title>
 </head>
 
 <body>
@@ -100,7 +100,7 @@ if ($result->num_rows == 0) {
             <div class="col-md-4" style="display: block; background-color: rgba(255, 255, 255, 0.4);">
 
                 <div style="text-align:center;">
-                    <input type="text" id="myInput" class="btn" placeholder="SEARCH" onkeyup="pretrazi()" style="margin: 5px;">
+                    <input type="text" id="myInput" class="btn" placeholder="SEARCH" onkeyup="search()" style="margin: 5px;">
                 </div>
                 <div style="text-align:center; ">
                     <button id="btn-add" class="btn" data-toggle="modal" data-target="#myModal" style="background-color: rgb(3, 70, 148); margin: 5px;">ADD</button>
@@ -181,8 +181,8 @@ if ($result->num_rows == 0) {
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <div class="container tim-form">
-                        <form action="#" method="post" id="izmeniForm">
+                    <div class="container player-form">
+                        <form action="#" method="post" id="editForm">
                             <h3 style="color: black">Edit Player</h3>
                             <div class="row">
                                 <div class="col-md-6">
@@ -225,7 +225,7 @@ if ($result->num_rows == 0) {
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script>
-        function pretrazi() {
+        function search() {
 
             var input, filter, table, tr, i, td1, td2, td3, td4, txtValue1, txtValue2, txtValue3, txtValue4;
             input = document.getElementById("myInput");
