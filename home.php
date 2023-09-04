@@ -3,6 +3,7 @@
 <head>
     <title>Chelsea FC</title>
     <link rel="stylesheet" href="css/home.css">
+    <link rel="icon" href="image/logo.png" />
 </head>
 <body>
     <div class="container">
@@ -12,19 +13,13 @@
                 <ul class="main-menu">
                     <li class="menu-item"><a href="home.php">HOME</a></li>
                     <li class="menu-item"><a href="players.php">PLAYERS</a></li>
-                    <li class="menu-item"><a href="logOut.php">LOG OUT</a></li>
+                    <li class="menu-item" id="logout"><a href="logOut.php">LOG OUT</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="hero"><h1 class="hero-text">KEEP THE <br> BLUE FLAG <br> FLYING HIGH</h1></div>
-        <div class="article">
-            <h1 class="title">Ovo je naslov</h1>
-            <hr>
-            <p class="article-text">
-                Organska hrana je hrana koja je uzgajana po standardima organske proizvodnje, odnosno bez upotrebe pesticida i veštačkog đubriva kada su žitarice, voće i povrće u pitanju, odnosno antibiotika ili hormona u uzgoju životinja čije se meso, ali i druge namirnice životinjskog porekla (jaja i mlečni proizvodi) koriste u ishrani. 
-            </p>
-        </div>
+        
         <div class="blog">
             <h1 class="title">About Chelsea F.C.</h1>
             <hr>

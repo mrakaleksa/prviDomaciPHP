@@ -29,9 +29,11 @@ body {
 }
 
 .menu-item a:hover {
-    color: rgb(219, 161, 17);
+    color: rgb(238, 36, 44);
     border-bottom: 1px solid rgb(219, 161, 17);
 }
+
+
 
 .logo {
     float: left;
@@ -40,9 +42,7 @@ body {
    
 }
 
-.logo a:hover{
-    color: rgb(238, 36, 44);
-}
+
 
 .logo h1 {
     margin: auto;

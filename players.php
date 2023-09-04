@@ -46,7 +46,7 @@ if ($result->num_rows == 0) {
                     <ul class="main-menu">
                        
                         <li class="menu-item"><a href="home.php">HOME</a></li>
-                        <li class="menu-item"><a href="logOut.php">LOG OUT</a></li>
+                        <li class="menu-item" id="logout"><a href="logOut.php">LOG OUT</a></li>
                     </ul>
                 </div>
             </div>
